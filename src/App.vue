@@ -106,9 +106,12 @@ function handleKeydown(e) {
 
   switch (e.key) {
     case 'ArrowLeft':
+    case 'PageUp':
+      e.preventDefault()
       pdfStore.prevPage()
       break
     case 'ArrowRight':
+    case 'PageDown':
     case ' ':
       e.preventDefault()
       pdfStore.nextPage()
